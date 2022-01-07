@@ -1,11 +1,3 @@
-# trabalhomobile
+# Trabalho para Mobile
 
-A new flutter module project.
-
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.dev/).
-
-For instructions integrating Flutter modules to your existing applications,
-see the [add-to-app documentation](https://flutter.dev/docs/development/add-to-app).
+Trabalho proposto pelo professor Vinicius von Glehn De Filippo durante o curso de Desenvolvimento para Dispositivos Moveis. Feito por mim e meus colegas, Diego Souza, Hermes Guimarães, Hugo Oliveira, Juliana Kill e Kamillah Santos, da turma A. 02/12/2021

@@ -1,3 +1,5 @@
+import 'package:trabalhomobile/footer.dart';
+
 import 'registroBD.dart';
 import 'header.dart';
 import 'registro.dart';
@@ -67,8 +69,8 @@ class _RegistroPageState extends State<RegistroPage> {
                 },
               ),
               Container(
-                child: Image.network(
-                  "https://www.agenciaprimaz.com.br/wp-content/uploads/2020/10/Hidr%C3%B4metro.jpg",
+                child: Image.asset(
+                  'assets/images/Hidrometro.jpg',
                   height: 400,
                 ),
               ),
@@ -112,6 +114,7 @@ class _RegistroPageState extends State<RegistroPage> {
           }
         },
       ),
+      bottomNavigationBar: Footer().build(context),
     );
   }
 }

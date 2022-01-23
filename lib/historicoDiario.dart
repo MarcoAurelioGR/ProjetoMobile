@@ -1,3 +1,5 @@
+import 'package:trabalhomobile/footer.dart';
+
 import 'registro.dart';
 import 'registroBD.dart';
 import 'registro_page.dart';
@@ -72,22 +74,26 @@ class _HistoricoState extends State<Historico> {
               );
             },
             child: InkWell(
-              child: ListTile(
-                shape: RoundedRectangleBorder(
-                  side: BorderSide(
-                      color: Color.fromRGBO(21, 198, 237, 1.0), width: 2),
+              child: Container(
+                margin: EdgeInsets.fromLTRB(20, 6, 20, 6),
+                child: ListTile(
+                  shape: RoundedRectangleBorder(
+                    side: BorderSide(
+                        color: Color.fromRGBO(21, 198, 237, 1.0), width: 2),
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  leading: Icon(
+                    Icons.check_circle_rounded,
+                    color: Colors.green,
+                    size: 25,
+                  ),
+                  title: Text(_listaRegistros[index].data! +
+                      ':       ${_listaRegistros[index].registro!}'),
+                  trailing: Icon(Icons.arrow_forward),
+                  onTap: () {
+                    exibeRegistroPage(registro: _listaRegistros[index]);
+                  },
                 ),
-                leading: Icon(
-                  Icons.check_circle_rounded,
-                  color: Colors.green,
-                  size: 25,
-                ),
-                title: Text(_listaRegistros[index].data! +
-                    ':       ${_listaRegistros[index].registro!}'),
-                trailing: Icon(Icons.arrow_forward),
-                onTap: () {
-                  exibeRegistroPage(registro: _listaRegistros[index]);
-                },
               ),
             ),
           );
@@ -104,6 +110,7 @@ class _HistoricoState extends State<Historico> {
         },
         icon: Icon(Icons.add),
       ),
+      bottomNavigationBar: Footer().build(context),
     );
   }
 

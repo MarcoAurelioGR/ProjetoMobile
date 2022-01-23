@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'footer.dart';
 import 'header.dart';
-import 'registroBD.dart';
 import 'routes.dart';
-
-RegistroBD db = RegistroBD();
 
 class Home extends StatelessWidget {
   @override
@@ -13,6 +10,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: Header().build(context),
       body: _body(),
+      bottomNavigationBar: Footer().build(context),
     );
   }
 
@@ -182,12 +180,7 @@ class Home extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(top: 90),
-          ),
-          Builder(
-            builder: (BuildContext inContext) {
-              return (Footer().build(inContext));
-            },
-          ),
+          )
         ],
       ),
     );
